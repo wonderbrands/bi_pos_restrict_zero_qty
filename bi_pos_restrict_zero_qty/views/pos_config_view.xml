@@ -15,11 +15,31 @@
                             <label for="restrict_zero_qty" string="Restrict Zero Quantity"/>
                             <div class="text-muted">
                                 Zero Quantity Product Validation
+                                <div class="col-12 col-lg-6 o_setting_box">
+                                </div>
                             </div>
                         </div>
+
+
+                            <!-- VARIABLE x_warehouse_pos_id-->
+                            <div class="o_setting_right_pane">
+                                <label for="x_warehouse_pos_id" string="Selecciona ubicaión de compra"/>
+                                <div class="text-muted">
+                                    El stock saldrá de esta ubicación
+                                    <div class="col-12 col-lg-6 o_setting_box">
+                                        <field name="x_warehouse_pos_id" required="1" />
+                                    </div>
+                                </div>
+                            </div>
+
+
+
                     </div>
-                </xpath>    
+                </xpath>
             </field>
         </record>
     </data>
 </odoo>
+
+
+<!--    -->
