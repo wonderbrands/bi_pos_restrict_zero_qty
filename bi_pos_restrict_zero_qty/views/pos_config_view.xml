@@ -23,11 +23,11 @@
 
                             <!-- VARIABLE x_warehouse_pos_id-->
                             <div class="o_setting_right_pane">
-                                <label for="x_warehouse_pos_id" string="Selecciona ubicaión de compra"/>
+                                <label for="warehouse_pos_id" string="Selecciona ubicaión de compra"/>
                                 <div class="text-muted">
                                     El stock saldrá de esta ubicación
                                     <div class="col-12 col-lg-6 o_setting_box">
-                                        <field name="x_warehouse_pos_id" required="1" />
+                                        <field name="warehouse_pos_id" required="1" />
                                     </div>
                                 </div>
                             </div>
