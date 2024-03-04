@@ -39,12 +39,13 @@ odoo.define('bi_pos_restrict_zero_qty.productScreen', function(require) {
 				//console.log(location_quantity);
 				var config_id=self.env.pos.config.id;
 
-                    //x_warehouse_pos_id  -> many2one   stock.location
+                    //warehouse_id  -> many2one   stock.warehouse
+                    //location_id   -> many2one   stock.location
+                    //quants_pos_id   -> many2one   stock.quant
                 //x_warehouse_id_2    -> many2one   stock.warehouse
-                //x_location_pos_id   -> many2one   stock.quant
                 //x_location_id_2     -> many2many  stock.quant
                 //line.pdr.id
-                var location_selected = pos_config.x_warehouse_pos_id[0];
+                var location_selected = pos_config.location_id[0];
                 console.log("Location with stock: ", location_selected);
 
                 //quant_info = http.request.env['stock.quant'].search([('product_id', '=', product_id)])
@@ -66,7 +67,7 @@ odoo.define('bi_pos_restrict_zero_qty.productScreen', function(require) {
 
                         //START
                         let prd_id = prd.id;
-                        var real_available_quantity;
+                        var real_available_quantity = 0;
                         // Método para obtener las cantidades específicas de almacenes
                         var quants = await this.getQuantInfo(prd_id);
                         console.log("Quants: ", quants);
