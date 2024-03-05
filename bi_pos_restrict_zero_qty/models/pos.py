@@ -8,8 +8,8 @@ class PosConfig(models.Model):
 	_inherit = "pos.config"
 
 	restrict_zero_qty = fields.Boolean(string='Restrict Zero Quantity')
-	warehouse_id = fields.Many2one('stock.location', string='Warehouse POS ID')
-	location_id = fields.Many2one('stock.quant', string='Location POS ID')
+	warehouse_id = fields.Many2one('stock.warehouse', string='Warehouse POS ID')
+	location_id = fields.Many2one('stock.location', string='Location POS ID')
 
 	@api.onchange('warehouse_id')
 	def onchange_warehouse_id(self):
