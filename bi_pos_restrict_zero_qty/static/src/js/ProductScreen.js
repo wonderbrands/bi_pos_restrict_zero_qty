@@ -105,16 +105,16 @@ odoo.define('bi_pos_restrict_zero_qty.productScreen', function(require) {
 						 console.log("prd: ", prd);
 
 
-						if(real_available_quantity <= 0){
-							if (prd.type == 'product'){
-								call_super = false;
-								let wrning = prd.display_name + ' is out of stock.';
-								self.showPopup('ErrorPopup', {
-									title: self.env._t('Zero Quantity Not allowed'),
-									body: self.env._t(wrning),
-								});
-							}
-						}
+//						if(real_available_quantity <= 0){
+//							if (prd.type == 'product'){
+//								call_super = false;
+//								let wrning = prd.display_name + ' is out of stock.';
+//								self.showPopup('ErrorPopup', {
+//									title: self.env._t('Zero Quantity Not allowed'),
+//									body: self.env._t(wrning),
+//								});
+//							}
+//						}
                         //});
                         };
 
